@@ -1,0 +1,49 @@
+{
+  "db": {
+    "enable": true,
+    "mysql": [
+      {
+        "key": "TestMysql1",
+        "user": "root",
+        "password": "123456",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "db": "test_copy",
+        "charset": "utf8mb4",
+        "timeout": 5,
+        "multi_statements": false,
+        "debug": false
+      },
+      {
+        "key": "TestMysql2",
+        "user": "root",
+        "password": "123456",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "db": "test_copy2",
+        "charset": "utf8mb4",
+        "timeout": 5,
+        "multi_statements": false,
+        "debug": false
+      }
+    ],
+    "sqlite": [
+      {
+        "key": "TestSqlite1",
+        "db_file": "data/data.db",
+        "debug": false
+      }
+    ]
+  },
+  "log": {
+    "log_level": "info",
+    "log_path": "D:\\work\\copy_table\\log",
+    "error_log": "error-%Y%m%d.log",
+    "sys_log": "sys-%Y%m%d.log"
+  },
+  "service": {
+    "log_path": "D:\\work\\copy_table\\log",
+    "pid_file": "console.pid",
+    "daemon_log": "daemon.log"
+  }
+}

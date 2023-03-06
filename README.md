@@ -1,4 +1,4 @@
-"# copy_table"
+# copy_table
 
 工具：
 支持多数据库，多表格 复制

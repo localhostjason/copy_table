@@ -23,7 +23,7 @@ type Auction struct {
 func NewAuction() *Auction {
 	return &Auction{
 		DBKey:         "TestMysql1",
-		CopySrcTables: []string{"table1"},
+		CopySrcTables: []string{"auction_history", "auction_history_buyer"},
 		Quit:          make(chan bool),
 	}
 }

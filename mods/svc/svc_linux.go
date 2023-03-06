@@ -4,6 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"github.com/sevlyar/go-daemon"
 	"log"
 	"os"
 	"os/signal"

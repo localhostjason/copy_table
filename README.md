@@ -13,3 +13,51 @@ fix: 地形与勇士 拍卖行和金币寄售 无法开启
 ./main -k start // 开启
 ./main -k stop  // 停止
 ```
+
+注：
+dist 下面 config/agent.json 请填写正确的 mysql 配置
+```json
+{
+  "db": {
+    "enable": true,
+    "mysql": [
+      {
+        "key": "TestMysql1",
+        "user": "root",
+        "password": "123456",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "db": "taiwan_cain_auction_gold",
+        "charset": "utf8mb4",
+        "timeout": 5,
+        "multi_statements": false,
+        "debug": false
+      },
+      {
+        "key": "TestMysql2",
+        "user": "root",
+        "password": "123456",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "db": "taiwan_cain_auction_cera",
+        "charset": "utf8mb4",
+        "timeout": 5,
+        "multi_statements": false,
+        "debug": false
+      }
+    ]
+  },
+  "log": {
+    "log_level": "info",
+    "log_path": "D:\\work\\copy_table\\log",
+    "error_log": "error-%Y%m%d.log",
+    "sys_log": "sys-%Y%m%d.log"
+  },
+  "service": {
+    "log_path": "D:\\work\\copy_table\\log",
+    "pid_file": "console.pid",
+    "daemon_log": "daemon.log"
+  }
+}
+
+```

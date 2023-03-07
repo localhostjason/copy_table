@@ -68,4 +68,7 @@ dist 下面 config/agent.json 请填写正确的 mysql 配置
 ```shell
 [mysqld]
 default-character-set=latin1
+
+[client]
+default-character-set=latin1
 ```

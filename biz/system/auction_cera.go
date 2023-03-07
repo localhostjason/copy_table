@@ -22,7 +22,7 @@ type Gold struct {
 func NewGold() *Gold {
 	return &Gold{
 		DBKey:         "TestMysql2",
-		CopySrcTables: []string{"user"},
+		CopySrcTables: []string{"auction_history", "auction_history_buyer"},
 		Quit:          make(chan bool),
 	}
 }

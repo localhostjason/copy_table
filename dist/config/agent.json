@@ -4,24 +4,24 @@
     "mysql": [
       {
         "key": "TestMysql1",
-        "user": "root",
-        "password": "123456",
-        "host": "127.0.0.1",
+        "user": "game",
+        "password": "uu5!^%jg",
+        "host": "192.168.43.142",
         "port": 3306,
         "db": "taiwan_cain_auction_gold",
-        "charset": "utf8mb4",
+        "charset": "utf8",
         "timeout": 5,
         "multi_statements": false,
         "debug": false
       },
       {
         "key": "TestMysql2",
-        "user": "root",
-        "password": "123456",
-        "host": "127.0.0.1",
+        "user": "game",
+        "password": "uu5!^%jg",
+        "host": "192.168.43.142",
         "port": 3306,
         "db": "taiwan_cain_auction_cera",
-        "charset": "utf8mb4",
+        "charset": "utf8",
         "timeout": 5,
         "multi_statements": false,
         "debug": false

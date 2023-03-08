@@ -2,6 +2,7 @@ package db
 
 import (
 	"fmt"
+	log "github.com/sirupsen/logrus"
 	"gorm.io/gorm"
 )
 
@@ -39,7 +40,7 @@ var tableModels []interface{}
 func Migrate() error {
 	DBPools.Range(func(k, db any) bool {
 		if err := db.(*gorm.DB).AutoMigrate(tableModels...); err != nil {
-			fmt.Println(fmt.Sprintf("failed to migrate database:%v", err))
+			log.Fatalln("failed to migrate database:", k, ",err:", err)
 			return false
 		}
 		return true

@@ -67,8 +67,8 @@ dist 下面 config/agent.json 请填写正确的 mysql 配置
 /etc/my.cnf 中：
 ```shell
 [mysqld]
-default-character-set=latin1
+default-character-set=utf8
 
 [client]
-default-character-set=latin1
+default-character-set=utf8
 ```

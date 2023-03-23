@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"runtime"
 	"tool/mods/config"
+	"tool/mods/pathx"
 	"tool/mods/svc"
 )
 
@@ -34,7 +35,7 @@ func getConf() (ServiceConfig, error) {
 }
 
 func init() {
-	execPath, _ := os.Getwd()
+	execPath, _ := pathx.GetExeDir()
 	logPath := filepath.Join(execPath, "log")
 	c := ServiceConfig{
 		LogPath:   logPath,

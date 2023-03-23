@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 const (
@@ -14,11 +15,38 @@ const (
 var RootDir string
 
 func init() {
-	RootDir = getExePath()
+	RootDir = getExePath2()
 }
 
 func getExePath() string {
 	ex, _ := os.Executable()
 	exeDir, _ := filepath.Abs(filepath.Dir(ex))
 	return exeDir
+}
+
+func getExePath2() string {
+	exeDir, _ := GetExeDir()
+	return exeDir
+}
+
+func GetExeDir() (string, error) {
+	exePath, err := os.Executable()
+	if err != nil {
+		return "", err
+	}
+	res := filepath.Dir(exePath)
+
+	if strings.Contains(exePath, getTmpDir()) {
+		// run 模式下，确在当前程序入口目录
+		return os.Getwd()
+	}
+	return res, nil
+}
+
+func getTmpDir() string {
+	dir := os.Getenv("TEMP")
+	if dir == "" {
+		dir = os.Getenv("TMP")
+	}
+	return dir
 }

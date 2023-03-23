@@ -10,8 +10,7 @@ fix: 地形与勇士 拍卖行和金币寄售 无法开启
 在 dist 目录下 运行：
 
 ```shell
-./main -k start // 开启
-./main -k stop  // 停止
+main.exe -x
 ```
 
 注：
@@ -46,17 +45,6 @@ dist 下面 config/agent.json 请填写正确的 mysql 配置
         "debug": false
       }
     ]
-  },
-  "log": {
-    "log_level": "info",
-    "log_path": "D:\\work\\copy_table\\log",
-    "error_log": "error-%Y%m%d.log",
-    "sys_log": "sys-%Y%m%d.log"
-  },
-  "service": {
-    "log_path": "D:\\work\\copy_table\\log",
-    "pid_file": "console.pid",
-    "daemon_log": "daemon.log"
   }
 }
 

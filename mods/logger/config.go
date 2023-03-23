@@ -1,9 +1,9 @@
 package logger
 
 import (
-	"os"
 	"path/filepath"
 	"tool/mods/config"
+	"tool/mods/pathx"
 )
 
 const _key = "log"
@@ -23,7 +23,7 @@ func GetConfig() (LogeConfig, error) {
 }
 
 func init() {
-	execPath, _ := os.Getwd()
+	execPath, _ := pathx.GetExeDir()
 	logPath := filepath.Join(execPath, "log")
 
 	c := LogeConfig{

@@ -8,6 +8,7 @@ import (
 	"gorm.io/gorm/schema"
 	"os"
 	"path/filepath"
+	"tool/mods/pathx"
 	"tool/mods/util"
 )
 
@@ -18,7 +19,7 @@ func ConnectWithSqliteConfig(cfgs []SqliteDBConfig) error {
 		if filepath.IsAbs(c.DbFile) {
 			dbFile = c.DbFile
 		} else {
-			exePath, _ := os.Getwd()
+			exePath, _ := pathx.GetExeDir()
 			dbFile = filepath.Join(exePath, c.DbFile)
 		}
 

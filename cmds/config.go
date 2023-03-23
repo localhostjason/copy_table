@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"tool/mods/config"
 	"tool/mods/db"
+	"tool/mods/pathx"
 	"tool/mods/util"
 )
 
@@ -54,7 +55,7 @@ func InitDefaultServerConfigFile(configFile string) string {
 		return configFile
 	}
 
-	execPath, _ := os.Getwd()
+	execPath, _ := pathx.GetExeDir()
 	configDir := filepath.Join(execPath, "config")
 	logDir := filepath.Join(execPath, "log")
 	file := filepath.Join(configDir, "agent.json")

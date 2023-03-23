@@ -54,8 +54,6 @@ dist 下面 config/agent.json 请填写正确的 mysql 配置
 若 邮件显示乱码，数据中 配置文件中设置
 /etc/my.cnf 中：
 ```shell
-[mysqld]
-default-character-set=latin1
 
 [client]
 default-character-set=latin1
